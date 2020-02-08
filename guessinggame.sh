@@ -13,6 +13,7 @@ function ask_num_files() {
 		echo 'Not a number, try again.'
 		ask_num_files
 	fi
+	guess=$(echo $guess | sed 's/^0*//')
 }
 
 num_files=$(ls -A | wc -l)
