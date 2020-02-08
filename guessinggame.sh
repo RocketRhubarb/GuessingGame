@@ -14,6 +14,11 @@ function ask_num_files() {
 		ask_num_files
 	fi
 	guess=$(echo $guess | sed 's/^0*//')
+	if [[ ${#guess} -gt 19 ]]
+	then
+		echo 'Your guess was too large to process'
+		ask_num_files
+	fi
 }
 
 num_files=$(ls -A | wc -l)
