@@ -9,6 +9,14 @@ function guessinggame {
 	ask_num_files() {
 		echo 'How many files are in the current directory?'
 		read guess
+		
+		# input sanitation
+		re='^[0-9]+$'
+		if ! [[ $guess =~ $re ]]
+		then
+			echo 'Not a number, try again.'
+			ask_num_files
+		fi
 	}
 
 	ask_num_files
