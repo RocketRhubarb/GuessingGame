@@ -32,7 +32,7 @@ function guessinggame {
 	done
 
 	echo 'You guess the correct number of files in this directory.'
-	echo 'There were' $num_files 'files in the directory.'
+	echo 'There are' $num_files 'files in the directory.'
 }
 
 guessinggame
