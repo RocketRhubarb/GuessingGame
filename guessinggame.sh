@@ -2,8 +2,7 @@
 #File: guessinggame.sh
 
 function guessinggame {
-	local files=($(ls -A))
-	local num_files=${#files[*]}
+	local num_files=$(ls -A | wc -l)
 	local guess
 
 	ask_num_files() {
